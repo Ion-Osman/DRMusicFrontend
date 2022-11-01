@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,10 @@
     <h1>Head line</h1>
     <div id="app">
         <h1 id="headline">{{message}}</h1>
-
+        <ul v-for="item in output">
+            <p>{{item.title}}</p>
+        </ul>
+        <p>{{error}}</p>
 
     </div>
     <script src="js/index.js"></script>
