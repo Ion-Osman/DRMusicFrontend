@@ -1,4 +1,4 @@
-baseUri = "";
+baseUri = "https://localhost:7095/Record";
 
 Vue.createApp({
     data() {
@@ -16,7 +16,7 @@ Vue.createApp({
     methods: {
              async helperGetPosts(uri){
                 try{
-                    const response = await axois.get(uri)
+                    const response = await axios.get(uri)
                     this.output = await response.data;
                     this.error = null;
                 } catch(ex){
